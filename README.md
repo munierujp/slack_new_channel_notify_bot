@@ -1,0 +1,2 @@
+# slack_new_channel_notify_bot
+Slackの新規チャンネルを投稿するBOT
