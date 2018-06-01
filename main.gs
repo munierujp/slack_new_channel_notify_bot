@@ -25,6 +25,7 @@ function doPost (e) {
 /**
 * リクエストを正規化します。
 * @param {Object} e - リクエスト
+* @return {Object} リクエスト
 */
 function normalizeRequest_ (e) {
   var postData = e.postData
