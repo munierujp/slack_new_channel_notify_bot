@@ -4,4 +4,4 @@ Slackの新規チャンネルを投稿するBOT
 ## プロパティ
 |プロパティ|説明|
 |---|---|
-|WEBHOOK_URL|SlackのWebhook URL|
+|`WEBHOOK_URL`|SlackのWebhook URL|
