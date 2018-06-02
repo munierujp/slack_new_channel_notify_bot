@@ -14,7 +14,7 @@ function doPost (e) {
     return createTextOutput_(challenge)
   } else if (requestType === REQUEST_TYPE_EVENT_CALLBACK) {
     var event = request.event
-    
+
     if (event.type === EVENT_TYPE_CHANNEL_CREATED) {
       var message = createMessage_(event)
       postToSlack_(message)
@@ -29,8 +29,7 @@ function doPost (e) {
 */
 function normalizeRequest_ (e) {
   var postData = e.postData
-  var contents = postData.contents
-  var request = contents ? contents : postData.getDataAsString()
+  var request = postData.contents || postData.getDataAsString()
   return JSON.parse(request)
 }
 
