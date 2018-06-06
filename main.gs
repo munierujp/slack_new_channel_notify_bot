@@ -39,7 +39,7 @@ function normalizeRequest_ (e) {
 * @return {TextOutput} TextOutputオブジェクト
 */
 function createTextOutput_ (text) {
-  return ContentService.createTextOutput_(text).setMimeType(ContentService.MimeType.TEXT)
+  return ContentService.createTextOutput(text).setMimeType(ContentService.MimeType.TEXT)
 }
 
 /**
