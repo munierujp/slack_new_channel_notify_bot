@@ -50,7 +50,8 @@ function createTextOutput_ (text) {
 * @param {Object} event - イベント
 * @param {Object} event.channel - イベントのチャンネル
 * @param {string} event.channel.id - イベントのチャンネルのID
-* @param {string} event.channel.created - イベントのチャンネルの作成日持
+* @param {string} event.channel.name - イベントのチャンネルの名前
+* @param {number} event.channel.created - イベントのチャンネルの作成日持
 * @param {string} event.channel.creator - イベントのチャンネルの作成者
 * @return {string} メッセージ
 */
