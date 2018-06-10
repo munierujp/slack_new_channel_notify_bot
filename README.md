@@ -22,7 +22,7 @@ Slackの新規チャンネルを通知するBOT
 |`{{creator}}`|作成者|`U024BE7LH`|
 
 ### MESSAGE_TEMPLATE_CREATED_FORMAT
-[Moment.js](https://momentjs.com/docs/#/displaying/format/)のパターン文字を使用できます。
+[Moment.js](https://momentjs.com/docs/#/displaying/format/)のフォーマットパターンを使用できます。
 
 ### MESSAGE_TEMPLATE_DATE_LANG
 以下の言語を指定できます。  
