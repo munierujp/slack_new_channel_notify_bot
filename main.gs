@@ -69,7 +69,7 @@ function createMessage_ (event) {
 /**
 * 文字列を複数の条件で置換します。
 * @param {string} source 文字列
-* @param {Object[][]} replacers 置換用オブジェクト配列
+* @param {Object[][]} replacers 置換用配列
 * @return {string} 置換した文字列
 */
 function replaceText_ (source, replacers) {
