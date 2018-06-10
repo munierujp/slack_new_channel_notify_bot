@@ -1,4 +1,7 @@
 var properties = PropertiesService.getScriptProperties()
+var MESSAGE_TEMPLATE = properties.getProperty('MESSAGE_TEMPLATE')
+var MESSAGE_TEMPLATE_CREATED_FORMAT = properties.getProperty('MESSAGE_TEMPLATE_CREATED_FORMAT')
+var MESSAGE_TEMPLATE_DATE_LANG = properties.getProperty('MESSAGE_TEMPLATE_DATE_LANG')
 var WEBHOOK_URL = properties.getProperty('WEBHOOK_URL')
 
 var REQUEST_TYPE_URL_VERIFICATION = 'url_verification'
@@ -47,14 +50,35 @@ function createTextOutput_ (text) {
 * @param {Object} event - イベント
 * @param {Object} event.channel - イベントのチャンネル
 * @param {string} event.channel.id - イベントのチャンネルのID
+* @param {string} event.channel.name - イベントのチャンネルの名前
+* @param {number} event.channel.created - イベントのチャンネルの作成日持
 * @param {string} event.channel.creator - イベントのチャンネルの作成者
 * @return {string} メッセージ
 */
 function createMessage_ (event) {
   var channel = event.channel
-  var id = channel.id
-  var creator = channel.creator
-  return '<#' + id + '> has created by <@' + creator + '>'
+  var replacers = [
+    [/{{id}}/g, channel.id],
+    [/{{name}}/g, channel.name],
+    [/{{created}}/g, Moment.moment(channel.created * 1000).format(MESSAGE_TEMPLATE_CREATED_FORMAT)],
+    [/{{creator}}/g, channel.creator]
+  ]
+  return replaceText_(MESSAGE_TEMPLATE, replacers)
+}
+
+/**
+* 文字列を複数の条件で置換します。
+* @param {string} source 文字列
+* @param {Object[][]} replacers 置換用オブジェクト配列
+* @return {string} 置換した文字列
+*/
+function replaceText_ (source, replacers) {
+  var replaced = source
+  for (var i in replacers) {
+    var replacer = replacers[i]
+    replaced = replaced.replace(replacer[0], replacer[1])
+  }
+  return replaced
 }
 
 /**
