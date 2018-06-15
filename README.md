@@ -18,7 +18,7 @@ Slackの新規チャンネルを通知するBOT
 |---|---|---|
 |`id`|チャンネルID|`C024BE91L`|
 |`name`|チャンネル名|`fun`|
-|`created`|作成日持|`1360782804`|
+|`created`|作成日持|`2013-02-13T19:13:24.000Z`|
 |`creator`|作成者のユーザーID|`U024BE7LH`|
 
 ### MESSAGE_TEMPLATE_CREATED_FORMAT
