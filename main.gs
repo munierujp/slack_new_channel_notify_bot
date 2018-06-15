@@ -59,28 +59,13 @@ function createTextOutput_ (text) {
 */
 function createMessage_ (event) {
   var channel = event.channel
-  var replacers = [
-    [/{{id}}/g, channel.id],
-    [/{{name}}/g, channel.name],
-    [/{{created}}/g, moment(channel.created * 1000).format(MESSAGE_TEMPLATE_CREATED_FORMAT)],
-    [/{{creator}}/g, channel.creator]
-  ]
-  return replaceText_(MESSAGE_TEMPLATE, replacers)
-}
-
-/**
-* 文字列を複数の条件で置換します。
-* @param {string} source 文字列
-* @param {Object[][]} replacers 置換用配列
-* @return {string} 置換した文字列
-*/
-function replaceText_ (source, replacers) {
-  var replaced = source
-  for (var i in replacers) {
-    var replacer = replacers[i]
-    replaced = replaced.replace(replacer[0], replacer[1])
+  var data = {
+    id: channel.id,
+    name: channel.name,
+    created: moment(channel.created * 1000).format(MESSAGE_TEMPLATE_CREATED_FORMAT),
+    creator: channel.creator
   }
-  return replaced
+  return Mustache.render(MESSAGE_TEMPLATE, data)
 }
 
 /**
