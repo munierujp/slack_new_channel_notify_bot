@@ -12,7 +12,7 @@ Slackの新規チャンネルを通知するBOT
 |`WEBHOOK_URL`|SlackのWebhook URL|`https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`|
 
 ### MESSAGE_TEMPLATE
-以下の変数に対して、[Mustache.js](https://github.com/janl/mustache.js/)の記法を使用できます。
+以下の変数を用いて、[Mustache.js](https://github.com/janl/mustache.js/)の記法で書けます。
 
 |変数|説明|例|
 |---|---|---|
