@@ -33,5 +33,5 @@ Slackの新規チャンネルを通知するBOT
 |`ja`|日本語|
 
 ## ライブラリ
-* Moment.js  
+* Moment  
 `MHMchiX6c1bwSqGM1PZiW_PxhMjh3Sh48`
