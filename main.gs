@@ -1,3 +1,5 @@
+var moment = Moment.moment
+
 var properties = PropertiesService.getScriptProperties()
 var MESSAGE_TEMPLATE = properties.getProperty('MESSAGE_TEMPLATE')
 var MESSAGE_TEMPLATE_CREATED_FORMAT = properties.getProperty('MESSAGE_TEMPLATE_CREATED_FORMAT')
@@ -60,7 +62,7 @@ function createMessage_ (event) {
   var replacers = [
     [/{{id}}/g, channel.id],
     [/{{name}}/g, channel.name],
-    [/{{created}}/g, Moment.moment(channel.created * 1000).format(MESSAGE_TEMPLATE_CREATED_FORMAT)],
+    [/{{created}}/g, moment(channel.created * 1000).format(MESSAGE_TEMPLATE_CREATED_FORMAT)],
     [/{{creator}}/g, channel.creator]
   ]
   return replaceText_(MESSAGE_TEMPLATE, replacers)
