@@ -51,21 +51,13 @@ function createTextOutput_ (text) {
 * メッセージを作成します。
 * @param {Object} event - イベント
 * @param {Object} event.channel - イベントのチャンネル
-* @param {string} event.channel.id - イベントのチャンネルのID
-* @param {string} event.channel.name - イベントのチャンネルの名前
 * @param {number} event.channel.created - イベントのチャンネルの作成日持
-* @param {string} event.channel.creator - イベントのチャンネルの作成者
 * @return {string} メッセージ
 */
 function createMessage_ (event) {
   var channel = event.channel
-  var data = {
-    id: channel.id,
-    name: channel.name,
-    created: moment(channel.created * 1000).format(MESSAGE_TEMPLATE_DATE_FORMAT),
-    creator: channel.creator
-  }
-  return Mustache.render(MESSAGE_TEMPLATE, data)
+  channel.created = moment(channel.created * 1000).format(MESSAGE_TEMPLATE_DATE_FORMAT)
+  return Mustache.render(MESSAGE_TEMPLATE, channel)
 }
 
 /**
