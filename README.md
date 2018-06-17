@@ -7,7 +7,7 @@ Slackの新規チャンネルを通知するBOT
 |プロパティ|説明|例|
 |---|---|---|
 |`MESSAGE_TEMPLATE`|メッセージのテンプレート|`<#{{id}}> has created by <@{{creator}}> on {{created}}.`|
-|`MESSAGE_TEMPLATE_CREATED_FORMAT`|メッセージのテンプレートの`created`のフォーマット|`YYYY[/]M[/]D H[:]mm[:]ss`|
+|`MESSAGE_TEMPLATE_DATE_FORMAT`|メッセージのテンプレートの日付のフォーマット|`YYYY[/]M[/]D H[:]mm[:]ss`|
 |`MESSAGE_TEMPLATE_DATE_LANG`|メッセージのテンプレートの日付の言語|`ja`|
 |`WEBHOOK_URL`|SlackのWebhook URL|`https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`|
 
@@ -21,7 +21,7 @@ Slackの新規チャンネルを通知するBOT
 |`created`|作成日持|`2013-02-13T19:13:24.000Z`|
 |`creator`|作成者のユーザーID|`U024BE7LH`|
 
-### MESSAGE_TEMPLATE_CREATED_FORMAT
+### MESSAGE_TEMPLATE_DATE_FORMAT
 [Moment.js](https://momentjs.com/docs/#/displaying/format/)のフォーマットパターンを使用できます。
 
 ### MESSAGE_TEMPLATE_DATE_LANG
