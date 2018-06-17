@@ -12,14 +12,7 @@ Slackの新規チャンネルを通知するBOT
 |`WEBHOOK_URL`|SlackのWebhook URL|`https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`|
 
 ### MESSAGE_TEMPLATE
-以下の変数を用いて、[Mustache.js](https://github.com/janl/mustache.js/)の記法で書けます。
-
-|変数|説明|例|
-|---|---|---|
-|`id`|チャンネルID|`C024BE91L`|
-|`name`|チャンネル名|`fun`|
-|`created`|作成日持|`2013-02-13T19:13:24.000Z`|
-|`creator`|作成者のユーザーID|`U024BE7LH`|
+[MESSAGE_TEMPLATE.md](MESSAGE_TEMPLATE.md)を参照してください。
 
 ### MESSAGE_TEMPLATE_DATE_FORMAT
 [Moment.js](https://momentjs.com/docs/#/displaying/format/)のフォーマットパターンを使用できます。
