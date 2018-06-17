@@ -2,7 +2,7 @@ var moment = Moment.moment
 
 var properties = PropertiesService.getScriptProperties()
 var MESSAGE_TEMPLATE = properties.getProperty('MESSAGE_TEMPLATE')
-var MESSAGE_TEMPLATE_CREATED_FORMAT = properties.getProperty('MESSAGE_TEMPLATE_CREATED_FORMAT')
+var MESSAGE_TEMPLATE_DATE_FORMAT = properties.getProperty('MESSAGE_TEMPLATE_DATE_FORMAT')
 var MESSAGE_TEMPLATE_DATE_LANG = properties.getProperty('MESSAGE_TEMPLATE_DATE_LANG')
 var WEBHOOK_URL = properties.getProperty('WEBHOOK_URL')
 
@@ -62,7 +62,7 @@ function createMessage_ (event) {
   var data = {
     id: channel.id,
     name: channel.name,
-    created: moment(channel.created * 1000).format(MESSAGE_TEMPLATE_CREATED_FORMAT),
+    created: moment(channel.created * 1000).format(MESSAGE_TEMPLATE_DATE_FORMAT),
     creator: channel.creator
   }
   return Mustache.render(MESSAGE_TEMPLATE, data)
