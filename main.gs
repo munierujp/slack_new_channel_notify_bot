@@ -10,6 +10,18 @@ var REQUEST_TYPE_URL_VERIFICATION = 'url_verification'
 var REQUEST_TYPE_EVENT_CALLBACK = 'event_callback'
 var EVENT_TYPE_CHANNEL_CREATED = 'channel_created'
 
+initialize_()
+
+function initialize_ () {
+  if (MESSAGE_TEMPLATE_DATE_LANG === 'ja') {
+    moment.lang('ja', {
+      weekdays: ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'],
+      weekdaysShort: ['日', '月', '火', '水', '木', '金', '土'],
+      weekdaysMin: ['日', '月', '火', '水', '木', '金', '土']
+    })
+  }
+}
+
 function doPost (e) {
   var request = normalizeRequest_(e)
   var requestType = request.type
