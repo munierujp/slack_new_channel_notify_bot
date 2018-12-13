@@ -4,12 +4,13 @@
 Slackの新規チャンネルを通知するBOT
 
 ## プロパティ
-|プロパティ|説明|例|
-|---|---|---|
-|`MESSAGE_TEMPLATE`|メッセージのテンプレート|`<#{{id}}> has created by <@{{creator}}> on {{created}}.`|
-|`MESSAGE_TEMPLATE_DATE_FORMAT`|メッセージのテンプレートの日付のフォーマット|`YYYY[/]M[/]D H[:]mm[:]ss`|
-|`MESSAGE_TEMPLATE_DATE_LANG`|メッセージのテンプレートの日付の言語|`ja`|
-|`WEBHOOK_URL`|SlackのWebhook URL|`https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`|
+|プロパティ|必須|説明|例|
+|---|---|---|---|
+|`MESSAGE_TEMPLATE`|○|メッセージのテンプレート|`<#{{id}}> has created by <@{{creator}}> on {{created}}.`|
+|`MESSAGE_TEMPLATE_DATE_FORMAT`|○|メッセージのテンプレートの日付のフォーマット|`YYYY[/]M[/]D H[:]mm[:]ss`|
+|`MESSAGE_TEMPLATE_DATE_LANG`|-|メッセージのテンプレートの日付の言語|`ja`|
+|`WEBHOOK_URL`|○|SlackのWebhook URL（メッセージ投稿用）|`https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`|
+|`WEBHOOK_URL_GASUNIT`|-|SlackのWebhook URL（GASUnitによるテスト結果投稿用）|`https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`|
 
 ### MESSAGE_TEMPLATE
 [MESSAGE_TEMPLATE.md](MESSAGE_TEMPLATE.md)を参照してください。
@@ -30,5 +31,6 @@ Slackの新規チャンネルを通知するBOT
 
 |ライブラリ|プロジェクトキー|
 |---|---|
+|GASUnit|`MSnMmw8hLWgjUG6uKSTQBEzVZgzu5bsVr`|
 |Moment|`MHMchiX6c1bwSqGM1PZiW_PxhMjh3Sh48`|
 |Mustache|`13re0EpD6XiVa5zHXndGiYtcH-QMnbeE5MJH190pJ8xCYhmuW5sX2ZO5R`|
