@@ -31,6 +31,6 @@ Slackの新規チャンネルを通知するBOT
 
 |ライブラリ|プロジェクトキー|
 |---|---|
-|GASUnit|`MSnMmw8hLWgjUG6uKSTQBEzVZgzu5bsVr`|
-|Moment|`MHMchiX6c1bwSqGM1PZiW_PxhMjh3Sh48`|
-|Mustache|`13re0EpD6XiVa5zHXndGiYtcH-QMnbeE5MJH190pJ8xCYhmuW5sX2ZO5R`|
+|[GASUnit](https://github.com/gasunit/GASUnit)|`MSnMmw8hLWgjUG6uKSTQBEzVZgzu5bsVr`|
+|[Moment](https://momentjs.com/)|`MHMchiX6c1bwSqGM1PZiW_PxhMjh3Sh48`|
+|[Mustache](https://github.com/munierujp/Mustache.gs)|`13re0EpD6XiVa5zHXndGiYtcH-QMnbeE5MJH190pJ8xCYhmuW5sX2ZO5R`|
